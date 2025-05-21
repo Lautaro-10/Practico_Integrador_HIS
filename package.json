@@ -1,0 +1,20 @@
+{
+  "name": "practico_integrador_his",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lautaro-10/Practico_Integrador_HIS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lautaro-10/Practico_Integrador_HIS/issues"
+  },
+  "homepage": "https://github.com/Lautaro-10/Practico_Integrador_HIS#readme"
+}
