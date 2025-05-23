@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Lautaro-10/Practico_Integrador_HIS/issues"
   },
-  "homepage": "https://github.com/Lautaro-10/Practico_Integrador_HIS#readme"
+  "homepage": "https://github.com/Lautaro-10/Practico_Integrador_HIS#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
 }

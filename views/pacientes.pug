@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title Pacientes
+  body
+    h1 Lista de Pacientes
+
+    table(border="1")
+      thead
+        tr
+          th ID
+          th Nombre
+          th Apellido
+          th DNI
+      tbody
+        each paciente in pacientes
+          tr
+            td= paciente.id
+            td= paciente.nombre
+            td= paciente.apellido
+            td= paciente.dni

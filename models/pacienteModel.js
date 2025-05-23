@@ -8,6 +8,4 @@ function obtenerPacientes(callback) {
     }
   });
 }
-module.exports = {
-  obtenerPacientes
-};
+module.exports = {obtenerPacientes};
