@@ -1,14 +1,16 @@
-const modeloPaciente = require('../models/pacienteModel');
+const { Paciente } = require('../models'); 
 
 function listarPacientes(req, res) {
-  modeloPaciente.obtenerPacientes((err, pacientes) => {
-    if (err) {
+  Paciente.findAll()
+    .then(pacientes => {
+      res.render('pacientes', { pacientes });
+    })
+    .catch(error => {
+      console.error('Error al obtener pacientes:', error);
       res.status(500).send('Error al obtener pacientes');
-    } else {
-      res.render('pacientes', { pacientes: pacientes });
-    }
-  });
+    });
 }
+
 module.exports = {
   listarPacientes
 };
