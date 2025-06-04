@@ -1,7 +1,16 @@
-const db = require('../models');
-
-db.Admisiones.findAll({ include: db.Paciente })
-  .then(admisiones => {
-    console.log(JSON.stringify(admisiones, null, 2));
+const { Admisiones, Paciente } = require('../models');
+function listarAdmisiones(req, res) {
+  Admisiones.findAll({
+    include: Paciente
   })
-  .catch(err => console.error(err));
+    .then(admisiones => {
+      res.render('admisiones', { admisiones });
+    })
+    .catch(error => {
+      console.error('Error al obtener admisiones:', error);
+      res.status(500).send('Error al obtener admisiones');
+    });
+}
+module.exports = {
+  listarAdmisiones
+};

@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1 Admisiones registradas
+
+  table.table.table-striped.mt-4
+    thead
+      tr
+        th ID
+        th Fecha
+        th Hora
+        th Motivo
+        th Paciente
+    tbody
+      each admision in admisiones
+        tr
+          td= admision.id
+          td= admision.fecha
+          td= admision.hora
+          td= admision.motivo
+          td #{admision.Paciente.nombre} #{admision.Paciente.apellido}

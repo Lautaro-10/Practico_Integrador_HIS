@@ -4,7 +4,8 @@ const app = express();
 const path = require('path');
 const rutasInicio = require('./routes/inicio');
 
-
+const rutasAdmisiones = require('./routes/admisiones');
+app.use('/admisiones', rutasAdmisiones);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname, 'public')));
@@ -14,6 +15,8 @@ app.use('/inicio', rutasInicio);
 app.get('/', (req, res) => {
   res.redirect('/inicio');
 });
+
+
 
 
 const PORT = process.env.PORT || 3000;
