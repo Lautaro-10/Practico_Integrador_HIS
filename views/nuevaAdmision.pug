@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1 Registrar nueva admisión
+
+  form(action="/admisiones/nueva", method="POST")
+    .mb-3
+      label.form-label(for="fecha") Fecha
+      input.form-control(type="date", name="fecha", required)
+    .mb-3
+      label.form-label(for="hora") Hora
+      input.form-control(type="time", name="hora", required)
+    .mb-3
+      label.form-label(for="motivo") Motivo
+      input.form-control(type="text", name="motivo", required)
+    .mb-3
+      label.form-label(for="pacienteId") Paciente
+      select.form-select(name="pacienteId", required)
+        option(value="") Seleccione un paciente
+        each paciente in pacientes
+          option(value=paciente.id)= `${paciente.nombre} ${paciente.apellido}`
+
+    button.btn.btn-primary(type="submit") Registrar
